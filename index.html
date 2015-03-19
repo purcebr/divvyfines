@@ -28,7 +28,7 @@
   <div class="row">
 
     <div class="large-12 columns">
-      <p>Charts listed as adjusted take into account the total number of rides for that group. These charts attempt to sho whether or not a certain group is more prone to fines.</p>
+      <p>Charts listed as adjusted take into account the total number of rides for the respective group. These charts attempt to show whether or not a certain group is more prone to fines.</p>
     </div>
   </div>
 
@@ -57,7 +57,7 @@
         <div class="large-6 medium-6 small-12 columns">
 
           <h4>Adjusted</h4>
-          <p>The amount of fines collected, on average, per ride.</p>
+          <p>The amount of fines collected, on average, per ride. As you can see, non-Subscribers are much more likely to incur fines. This data is skewed because of extreemly large fines levied against customers who kept bikes for > 1 day however.</p>
           <div ng-controller="UserTypeAdjustedController">
             <canvas id="pie" class="chart chart-bar" data="data" options="options" legend="false"
             labels="labels"></canvas> 
@@ -66,7 +66,7 @@
       </div>
     </div>
 
-<div class="panel">
+      <div class="panel">
 
           <div class="row">
             <div class="large-12 columns">
@@ -96,6 +96,11 @@
             <canvas id="pie" class="chart chart-bar" data="data" options="options" legend="false"
             labels="labels"></canvas> 
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+        <p>We can see that in this case, male subscribers produce more fines because they use the service on average more frequently than women. In terms of fine/per ride averages, however, women were more likely to incur a fine on any given trip.</p>
         </div>
       </div>
     </div>
