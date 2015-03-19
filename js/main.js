@@ -117,6 +117,23 @@ app.controller("MonthsController", function ($scope) {
 
 });
 
+app.controller("MonthsAdjustedController", function ($scope) {
+  $scope.options = {
+    scaleLabel: "$<%=value%>",
+    tooltipTemplate: "<%if (label){%><%=label%>: <%}%>$<%= value %>"
+  };
+  $scope.labels = ["January '14", "February '14", "March '14", "April '14", "May '14", "June '14", "July '14", "August '14", "September '14", "October '14", "November '14", "December '14"];
+  $scope.series = ['Months Adjusted'];
+  $scope.data = [
+  [5898.44 / 25074, 8641.16 / 28081,32547.42 / 69302,106918.48 / 158479,218329.62 /278601,241265.35 / 346154,266491.64 / 410276,251356.90 / 392051,143062.04 /308635,88510.99 /237324,29239.43 /113878, 18704.17 /86776]
+  ];
+  $scope.onClick = function (points, evt) {
+    console.log(points, evt);
+  };
+
+});
+
+
 app.controller("DaysController", function ($scope) {
 	$scope.options = {
 		scaleLabel: "$<%=value%>",
@@ -133,6 +150,21 @@ app.controller("DaysController", function ($scope) {
 
 });
 
+app.controller("DaysAdjustedController", function ($scope) {
+  $scope.options = {
+    scaleLabel: "$<%=value%>",
+    tooltipTemplate: "<%if (label){%><%=label%>: <%}%>$<%= value %>"
+  };
+  $scope.labels = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  $scope.series = ['Days Adjusted'];
+  $scope.data = [
+  [183185.69 /342764, 133704.69 / 335397,115565.72 / 337159,130549.02/342551,184366.51/366778,322023.96 / 378265,341573.55 / 351720]
+  ];
+  $scope.onClick = function (points, evt) {
+    console.log(points, evt);
+  };
+
+});
 
 // app.controller("AgeController", function ($scope) {
 // 	   $scope.options = {

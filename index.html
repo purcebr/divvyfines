@@ -109,12 +109,35 @@
 
 
 
+      <div class="panel">
+
+          <div class="row">
+            <div class="large-12 columns">
+              <h3>Fines By Month</h3>
+            </div>
+          </div>
+
       <div class="row">
-        <div class="large-6 med-6 columns">
-          <div class="panel">
-            <h3>Fines By Month</h3>
-            <p class="description">Here's a breakdown of fine revenue for each month of 2014.</p>
+
+
+        <div class="large-6 medium-6 small-12 columns">
+
+          <h4>Net Amount Fined</h4>
+          <p class="description">Total Fines collected in 2014, organized by month.</p>
+
             <div ng-controller="MonthsController">
+              <canvas id="months-line" class="chart chart-line" options="options" data="data"
+              labels="labels" legend="false" series="series"
+              click="onClick">
+            </canvas>
+          </div>
+        </div>
+
+        <div class="large-6 medium-6 small-12 columns">
+
+          <h4>Adjusted</h4>
+          <p class="description">The amount of fines collected, on average, broken out by month.</p>
+            <div ng-controller="MonthsAdjustedController">
               <canvas id="months-line" class="chart chart-line" options="options" data="data"
               labels="labels" legend="false" series="series"
               click="onClick">
@@ -122,27 +145,65 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="large-12 columns">
+        <p>This one is my favorite! The adjusted chart shows the fine rate on a per-ride basis. You can see that users are less likely to incur fines when it's cold out - and the most leisurely stretch is in May, probably because the weather's getting nicer!</p>
+        </div>
+      </div>
+    </div>
 
-      <div class="large-6 med-6 columns">
-        <div class="panel">
+   <div class="panel">
 
-          <h3>Fines By Day of Week</h3>
-          <p class="description">What days of the week see the most Divvy fines? Weekends. Livin it up!</p>
+          <div class="row">
+            <div class="large-12 columns">
+              <h3>Fines By Day of Week</h3>
+            </div>
+          </div>
+
+      <div class="row">
+
+
+        <div class="large-6 medium-6 small-12 columns">
+
+          <h4>Net Amount Fined</h4>
+          <p class="description">Total Fines collected in 2014, organized by day of week.</p>
+
+          <div ng-controller="GenderController">
           <div ng-controller="DaysController">
             <canvas id="day-line" class="chart chart-line" options="options" data="data"
             labels="labels" legend="false" series="series"
             click="onClick">
           </canvas> 
         </div>
+          </div>
+        </div>
+
+        <div class="large-6 medium-6 small-12 columns">
+
+          <h4>Adjusted</h4>
+          <p class="description">The per-ride fee amount collected, on average, broken out by day of week.</p>
+          <div ng-controller="DaysAdjustedController">
+            <canvas id="day-line" class="chart chart-line" options="options" data="data"
+            labels="labels" legend="false" series="series"
+            click="onClick">
+          </canvas> 
+        </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+        <p>Adjusting this dataset for a per-ride amount further emphasizes the trend that we're seeing in the Net Fines chart on the left.</p>
+        </div>
       </div>
     </div>
+
   </div>
 
   <div class="row">
     <div class="large-12 med-12 columns">
       <div class="panel">
         <h3>Fines by Age Group</h3>
-        <p>Turns people of all ages don't make it to the dock on time. Dollar amount totals for fines incurred accross age ranges.The 26 to 33 group seems to be the most reckless here. But wait! What if there are just more riders in this demographic? Keep scrolling for a ride-adjusted version.</p>
+        <p>Turns out people of all ages don't make it to the dock on time. Dollar amount totals for fines incurred accross age ranges.The 26 to 33 group seems to be the most reckless here. But wait! What if there are just more riders in this demographic? Keep scrolling for a ride-adjusted version.</p>
         <div ng-controller="AgeController">
           <canvas id="pie-age" class="chart chart-pie" data="data" options="options" legend="true"
           labels="labels"></canvas> 
@@ -160,6 +221,7 @@
           <canvas id="pie-age" class="chart chart-bar" data="data" options="options" legend="false"
           labels="labels"></canvas> 
         </div>
+        <p>It looks like the young and the old are most guilty here.</p>
       </div>
     </div>
 
