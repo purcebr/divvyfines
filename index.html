@@ -22,7 +22,7 @@
   <div class="row">
     <div class="large-12 columns">
       <h1>DivvyFines</h1>
-      <p>A Breakdown of who's getting fined and when for Divvy, Chicago's bike share program.</p>
+      <p>A Breakdown of who's getting fined and when while using Divvy, Chicago's bike share program.</p>
       <hr>
     </div>
   </div>
@@ -59,7 +59,7 @@
         <div class="large-6 medium-6 small-12 columns">
 
           <h4>Adjusted</h4>
-          <p>The amount of fines collected, on average, per ride. As you can see, non-Subscribers are much more likely to incur fines. This data is skewed because of extreemly large fines levied against customers who kept bikes for > 1 day however.</p>
+          <p>The amount of fines collected, on average, per ride. As you can see, non-subscribers are much more likely to incur fines. This data is skewed because of extremely large fines levied against customers who kept bikes for > 1 day.</p>
           <div ng-controller="UserTypeAdjustedController">
             <canvas id="pie" class="chart chart-bar" data="data" options="options" legend="false"
             labels="labels"></canvas> 
@@ -82,7 +82,7 @@
         <div class="large-6 medium-6 small-12 columns">
 
           <h4>Net Amount Fined</h4>
-          <p class="description">Total Fines Collected split up by men/women in 2014.</p>
+          <p class="description">Total Fines Collected split up by men/women Divvy subscribers in 2014.</p>
 
           <div ng-controller="GenderController">
             <canvas id="pie" class="chart chart-pie" data="data" options="options" legend="true"
@@ -123,7 +123,7 @@
         <div class="large-6 medium-6 small-12 columns">
 
           <h4>Net Amount Fined</h4>
-          <p class="description">Total Fines collected in 2014, organized by month.</p>
+          <p class="description">Total fines collected in 2014, organized by month.</p>
 
             <div ng-controller="MonthsController">
               <canvas id="months-line" class="chart chart-line" options="options" data="data"
@@ -147,7 +147,7 @@
       </div>
       <div class="row">
         <div class="large-12 columns">
-        <p>This one is my favorite! The adjusted chart shows the fine rate on a per-ride basis. You can see that users are less likely to incur fines when it's cold out - and the most leisurely stretch is in May, probably because the weather's getting nicer!</p>
+        <p>This one is my favorite! The adjusted chart shows the fine rate on a per-ride basis. You can see that users are less likely to incur fines when it's cold outside - and the most leisurely (and costly) stretch is in May, probably because the weather's getting nicer!</p>
         </div>
       </div>
     </div>

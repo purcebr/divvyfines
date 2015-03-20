@@ -127,6 +127,7 @@ app.controller("MonthsAdjustedController", function ($scope) {
   $scope.data = [
   [(5898.44 / 25074).toFixed(2), (8641.16 / 28081).toFixed(2),(32547.42 / 69302).toFixed(2),(106918.48 / 158479).toFixed(2),(218329.62 /278601).toFixed(2),(241265.35 / 346154).toFixed(2),(266491.64 / 410276).toFixed(2),(251356.90 / 392051).toFixed(2),(143062.04 /308635).toFixed(2),(88510.99 /237324).toFixed(2),(29239.43 /113878).toFixed(2), (18704.17 /86776).toFixed(2)]
   ];
+  console.log($scope.data);
   $scope.onClick = function (points, evt) {
     console.log(points, evt);
   };
